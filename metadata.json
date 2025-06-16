@@ -1,0 +1,51 @@
+{
+  "name": "RewardLoop Neural",
+  "version": "1.0.0",
+  "url": "https://rewardloop-9u1vxszxg-vai0sxs-projects.vercel.app",
+  "icon": "https://rewardloop-9u1vxszxg-vai0sxs-projects.vercel.app/icon.png",
+  "title": "RewardLoop - Neural Engagement",
+  "description": "Sistema de engagement con recompensas automatizadas potenciado por IA neural",
+  "actions": [
+    {
+      "type": "blockchain",
+      "label": "Crear Loop Neural",
+      "address": "0x3872c49061B43FAe55f05354D5D819CEC2A360B9",
+      "chains": { "source": "avalanche" },
+      "amount": 0.1,
+      "params": [
+        {
+          "name": "loopType",
+          "label": "Tipo de Loop",
+          "type": "select",
+          "required": true,
+          "options": [
+            { "label": "📱 Contenido Social", "value": 1, "description": "Crea contenido diario" },
+            { "label": "💬 Interacción", "value": 2, "description": "Participa en comunidades" },
+            { "label": "📚 Aprendizaje", "value": 3, "description": "Completa cursos y lecciones" },
+            { "label": "🏃‍♂️ Fitness", "value": 4, "description": "Actividades físicas" },
+            { "label": "🎯 Personalizado", "value": 5, "description": "Define tu propio objetivo" }
+          ]
+        },
+        {
+          "name": "targetMetric",
+          "label": "Meta de Acciones",
+          "type": "number",
+          "required": true,
+          "min": 1,
+          "max": 365,
+          "description": "Número de acciones para completar el loop"
+        },
+        {
+          "name": "rewardAmount",
+          "label": "Recompensa por Acción (AVAX)",
+          "type": "number",
+          "required": true,
+          "min": 0.001,
+          "max": 1,
+          "step": 0.001,
+          "description": "Recompensa en AVAX por cada acción completada"
+        }
+      ]
+    }
+  ]
+} 
